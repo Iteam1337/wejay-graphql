@@ -1,0 +1,29 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Room #join pushes a new user 1`] = `
+Array [
+  Object {
+    "email": "cookie@monster.com",
+  },
+]
+`;
+
+exports[`Room #queueTrack queues a track 1`] = `
+Array [
+  Object {
+    "name": "test",
+  },
+]
+`;
+
+exports[`Room can create a Room 1`] = `
+Room {
+  "currentTrack": null,
+  "history": Array [],
+  "id": "1",
+  "name": "test",
+  "queue": Array [],
+  "timer": null,
+  "users": Array [],
+}
+`;

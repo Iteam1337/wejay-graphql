@@ -1,27 +1,80 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`resolvers/Query #room finds one room using id 1`] = `
-Object {
+exports[`resolvers Mutations #addRoom returns a new room 1`] = `
+Room {
+  "currentTrack": null,
+  "history": Array [],
   "id": "1",
-  "name": "Test",
+  "name": "newRoom",
   "queue": Array [],
+  "timer": null,
   "users": Array [],
 }
 `;
 
-exports[`resolvers/Query #rooms returns current rooms 1`] = `
-Array [
-  Object {
-    "id": "1",
-    "name": "Test",
-    "queue": Array [],
-    "users": Array [],
-  },
-  Object {
-    "id": "2",
-    "name": "Iteam",
-    "queue": Array [],
-    "users": Array [],
-  },
-]
+exports[`resolvers Mutations #joinRoom returns the updated room 1`] = `
+Room {
+  "currentTrack": null,
+  "history": Array [],
+  "id": "1",
+  "name": "test",
+  "queue": Array [
+    Object {
+      "album": undefined,
+      "artists": undefined,
+      "duration": undefined,
+      "name": undefined,
+      "spotifyUri": undefined,
+    },
+    Object {
+      "album": Object {
+        "name": "albumname",
+      },
+      "artists": Array [
+        Object {
+          "name": "artist",
+        },
+      ],
+      "duration": 30000,
+      "name": "track",
+      "spotifyUri": "6Inmo6ElDCaiZCiB6lficH",
+    },
+  ],
+  "timer": null,
+  "users": Array [
+    Object {
+      "email": "cookie@monster.com",
+    },
+  ],
+}
 `;
+
+exports[`resolvers Mutations #queueTrack returns the new track 1`] = `
+Object {
+  "album": Object {
+    "name": "albumname",
+  },
+  "artists": Array [
+    Object {
+      "name": "artist",
+    },
+  ],
+  "duration": 30000,
+  "name": "track",
+  "spotifyUri": "6Inmo6ElDCaiZCiB6lficH",
+}
+`;
+
+exports[`resolvers Query #room finds one room using id 1`] = `
+Room {
+  "currentTrack": null,
+  "history": Array [],
+  "id": "1",
+  "name": "test",
+  "queue": Array [],
+  "timer": null,
+  "users": Array [],
+}
+`;
+
+exports[`resolvers Query #rooms returns current rooms 1`] = `Array []`;
