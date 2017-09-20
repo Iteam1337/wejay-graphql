@@ -8,24 +8,25 @@ Room {
   "name": "newRoom",
   "queue": Array [],
   "timer": null,
+  "userSongs": Object {},
   "users": Array [],
 }
 `;
 
 exports[`resolvers Mutations #joinRoom returns the updated room 1`] = `
 Room {
-  "currentTrack": null,
+  "currentTrack": Object {
+    "album": undefined,
+    "artists": undefined,
+    "duration": undefined,
+    "name": undefined,
+    "spotifyUri": undefined,
+    "started": "2017-09-20T19:47:14.830Z",
+  },
   "history": Array [],
   "id": "1",
   "name": "test",
   "queue": Array [
-    Object {
-      "album": undefined,
-      "artists": undefined,
-      "duration": undefined,
-      "name": undefined,
-      "spotifyUri": undefined,
-    },
     Object {
       "album": Object {
         "name": "albumname",
@@ -41,12 +42,17 @@ Room {
     },
   ],
   "timer": null,
+  "userSongs": Object {
+    "d34479239e70df24688f16b94add383f": Array [],
+  },
   "users": Array [
     Object {
       "email": "cookie@monster.com",
+      "id": "d34479239e70df24688f16b94add383f",
     },
     Object {
       "email": "cookie@monster.com",
+      "id": "d34479239e70df24688f16b94add383f",
     },
   ],
 }
@@ -76,6 +82,7 @@ Room {
   "name": "test",
   "queue": Array [],
   "timer": null,
+  "userSongs": Object {},
   "users": Array [],
 }
 `;
