@@ -45,6 +45,9 @@ Room {
     Object {
       "email": "cookie@monster.com",
     },
+    Object {
+      "email": "cookie@monster.com",
+    },
   ],
 }
 `;
