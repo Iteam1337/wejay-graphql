@@ -1,0 +1,27 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`resolvers/Query #room finds one room using id 1`] = `
+Object {
+  "id": "1",
+  "name": "Test",
+  "queue": Array [],
+  "users": Array [],
+}
+`;
+
+exports[`resolvers/Query #rooms returns current rooms 1`] = `
+Array [
+  Object {
+    "id": "1",
+    "name": "Test",
+    "queue": Array [],
+    "users": Array [],
+  },
+  Object {
+    "id": "2",
+    "name": "Iteam",
+    "queue": Array [],
+    "users": Array [],
+  },
+]
+`;
