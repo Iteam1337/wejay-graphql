@@ -14,47 +14,34 @@ Room {
 `;
 
 exports[`resolvers Mutations #joinRoom returns the updated room 1`] = `
-Room {
-  "currentTrack": Object {
-    "album": undefined,
-    "artists": undefined,
-    "duration": undefined,
-    "name": undefined,
-    "spotifyUri": undefined,
-    "started": "2017-09-20T19:47:14.830Z",
-  },
+Object {
+  "currentTrack": null,
   "history": Array [],
   "id": "1",
+  "join": [Function],
   "name": "test",
-  "queue": Array [
-    Object {
-      "album": Object {
-        "name": "albumname",
-      },
-      "artists": Array [
-        Object {
-          "name": "artist",
-        },
-      ],
-      "duration": 30000,
-      "name": "track",
-      "spotifyUri": "6Inmo6ElDCaiZCiB6lficH",
-    },
-  ],
+  "next": [Function],
+  "queue": Array [],
+  "queueTrack": [Function],
   "timer": null,
-  "userSongs": Object {
-    "d34479239e70df24688f16b94add383f": Array [],
-  },
-  "users": Array [
-    Object {
-      "email": "cookie@monster.com",
-      "id": "d34479239e70df24688f16b94add383f",
-    },
-    Object {
-      "email": "cookie@monster.com",
-      "id": "d34479239e70df24688f16b94add383f",
-    },
-  ],
+  "userSongs": Object {},
+  "users": Array [],
+}
+`;
+
+exports[`resolvers Mutations #nextTrack returns the room 1`] = `
+Object {
+  "currentTrack": null,
+  "history": Array [],
+  "id": "1",
+  "join": [Function],
+  "name": "test",
+  "next": [Function],
+  "queue": Array [],
+  "queueTrack": [Function],
+  "timer": null,
+  "userSongs": Object {},
+  "users": Array [],
 }
 `;
 
@@ -71,16 +58,20 @@ Object {
   "duration": 30000,
   "name": "track",
   "spotifyUri": "6Inmo6ElDCaiZCiB6lficH",
+  "user": "1337",
 }
 `;
 
-exports[`resolvers Query #room finds one room using id 1`] = `
-Room {
+exports[`resolvers Query #room finds one room using name 1`] = `
+Object {
   "currentTrack": null,
   "history": Array [],
   "id": "1",
+  "join": [Function],
   "name": "test",
+  "next": [Function],
   "queue": Array [],
+  "queueTrack": [Function],
   "timer": null,
   "userSongs": Object {},
   "users": Array [],

@@ -8,10 +8,22 @@ Array [
 ]
 `;
 
+exports[`Room #queueTrack adds the track to userSongs 1`] = `
+Object {
+  "1337": Array [
+    Object {
+      "name": "test",
+      "user": "1337",
+    },
+  ],
+}
+`;
+
 exports[`Room #queueTrack queues a track 1`] = `
 Array [
   Object {
     "name": "test",
+    "user": "1337",
   },
 ]
 `;
