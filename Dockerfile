@@ -7,4 +7,6 @@ RUN npm install --silent
 
 ADD . /app
 
+EXPOSE 80
+
 CMD npm start
