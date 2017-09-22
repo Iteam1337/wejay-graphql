@@ -3,7 +3,6 @@
 exports[`resolvers Mutations #addRoom returns a new room 1`] = `
 Room {
   "currentTrack": null,
-  "history": Array [],
   "id": "1",
   "name": "newRoom",
   "queue": Array [],
@@ -13,10 +12,28 @@ Room {
 }
 `;
 
+exports[`resolvers Mutations #joinRoom just returns room if already logged in 1`] = `
+Object {
+  "currentTrack": null,
+  "id": "1",
+  "join": [Function],
+  "name": "test",
+  "next": [Function],
+  "queue": Array [],
+  "queueTrack": [Function],
+  "timer": null,
+  "userSongs": Object {},
+  "users": Array [
+    Object {
+      "id": "md5",
+    },
+  ],
+}
+`;
+
 exports[`resolvers Mutations #joinRoom returns the updated room 1`] = `
 Object {
   "currentTrack": null,
-  "history": Array [],
   "id": "1",
   "join": [Function],
   "name": "test",
@@ -32,7 +49,6 @@ Object {
 exports[`resolvers Mutations #nextTrack returns the room 1`] = `
 Object {
   "currentTrack": null,
-  "history": Array [],
   "id": "1",
   "join": [Function],
   "name": "test",
@@ -65,7 +81,6 @@ Object {
 exports[`resolvers Query #room finds one room using name 1`] = `
 Object {
   "currentTrack": null,
-  "history": Array [],
   "id": "1",
   "join": [Function],
   "name": "test",

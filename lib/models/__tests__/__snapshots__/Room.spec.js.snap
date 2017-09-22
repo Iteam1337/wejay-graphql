@@ -1,5 +1,60 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`Room #createQueue filters out currentTrack if any 1`] = `
+Array [
+  Object {
+    "name": "first",
+    "spotifyUri": "12",
+    "user": Object {
+      "id": "1337",
+      "lastPlay": 1505865600000,
+    },
+  },
+  Object {
+    "name": "second",
+    "spotifyUri": "13",
+    "user": Object {
+      "id": "1338",
+      "lastPlay": 1505865600001,
+    },
+  },
+  Object {
+    "name": "third",
+    "spotifyUri": "11",
+    "user": Object {
+      "id": "1337",
+      "lastPlay": 1505865600000,
+    },
+  },
+]
+`;
+
+exports[`Room #createQueue returns a weaved queue 1`] = `
+Array [
+  Object {
+    "name": "first",
+    "user": Object {
+      "id": "1337",
+      "lastPlay": 1505865600000,
+    },
+  },
+  Object {
+    "name": "second",
+    "user": Object {
+      "id": "1338",
+      "lastPlay": 1505865600001,
+    },
+  },
+  Object {
+    "name": "third",
+    "user": Object {
+      "id": "1337",
+      "lastPlay": 1505865600000,
+    },
+  },
+]
+`;
+
 exports[`Room #join pushes a new user 1`] = `
 Array [
   Object {
@@ -23,7 +78,11 @@ exports[`Room #queueTrack queues a track 1`] = `
 Array [
   Object {
     "name": "test",
-    "user": "1337",
+    "spotifyUri": "2",
+    "user": Object {
+      "id": "1337",
+      "lastPlay": 1,
+    },
   },
 ]
 `;
@@ -31,7 +90,6 @@ Array [
 exports[`Room can create a Room 1`] = `
 Room {
   "currentTrack": null,
-  "history": Array [],
   "id": "1",
   "name": "test",
   "queue": Array [],
