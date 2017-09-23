@@ -1,5 +1,9 @@
 # wejay-graphql
 
+[![Build Status](https://travis-ci.org/Iteam1337/wejay-graphql.svg?branch=master)](https://travis-ci.org/Iteam1337/wejay-graphql)
+[![Code Climate](https://codeclimate.com/github/Iteam1337/wejay-graphql/badges/gpa.svg)](https://codeclimate.com/github/Iteam1337/wejay-graphql)
+[![Test Coverage](https://codeclimate.com/github/Iteam1337/wejay-graphql/badges/coverage.svg)](https://codeclimate.com/github/Iteam1337/wejay-graphql/coverage)
+
 ### Example queries
 
 ```graphql
