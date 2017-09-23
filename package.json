@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "start": "nodemon ./lib/server.js --exec babel-node -e js",
-    "test": "jest --watch"
+    "test": "jest",
+    "test:dev": "jest --watch"
   },
   "author": "Rickard Laurin <rickard.laurin@gmail.com> (http://rickardlaurin.se/)",
   "license": "MIT",
