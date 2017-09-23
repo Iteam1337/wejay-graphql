@@ -8,7 +8,6 @@ install :
   - npm install
   - npm install codeclimate-test-reporter -g
 script :
-  - npm test -- --coverage
   - npm run coverage
 after_script :
   - codeclimate-test-reporter < coverage/lcov.info
