@@ -64,5 +64,6 @@ type Mutation {
 }
 
 type Subscription {
+  onNextTrack(roomName: String!): Track
   roomUpdated(roomName: String!): Room
 }
