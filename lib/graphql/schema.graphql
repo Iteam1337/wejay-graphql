@@ -59,11 +59,15 @@ type Mutation {
   addRoom(roomName: String!): Room
   joinRoom(input: JoinRoomInput!): Room
   nextTrack(roomName: String!): Room
+  pause(roomName: String!): Boolean
+  play(roomName: String!): Boolean
   queueTrack(input: QueueInput!): Track
   search(query: String!): [Track!]!
 }
 
 type Subscription {
   onNextTrack(roomName: String!): Track
+  onPause(roomName: String!): Boolean
+  onPlay(roomName: String!): Boolean
   roomUpdated(roomName: String!): Room
 }
