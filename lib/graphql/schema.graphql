@@ -1,0 +1,68 @@
+type Album {
+  images: [Cover]
+  name: String
+  uri: String
+}
+
+type Artist {
+  name: String
+  uri: String
+}
+
+type Cover {
+  height: Int
+  url: String
+  width: Int
+}
+
+type Track {
+  album: Album
+  artists: [Artist]
+  duration: Float
+  name: String
+  spotifyUri: String
+  started: Float
+  user: User
+}
+
+type User {
+  email: String!
+  id: String!
+  lastPlay: Float
+}
+
+type Room {
+  id: ID!
+  name: String!
+  currentTrack: Track
+  queue: [Track]!
+  users: [User]!
+}
+
+input QueueInput {
+  roomName: String!
+  spotifyId: String!
+  userId: String!
+}
+
+input JoinRoomInput {
+  roomName: String!
+  email: String!
+}
+
+type Query {
+  rooms: [Room]
+  room(name: String!): Room
+}
+
+type Mutation {
+  addRoom(roomName: String!): Room
+  joinRoom(input: JoinRoomInput!): Room
+  nextTrack(roomName: String!): Room
+  queueTrack(input: QueueInput!): Track
+  search(query: String!): [Track!]!
+}
+
+type Subscription {
+  roomUpdated(roomName: String!): Room
+}
