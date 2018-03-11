@@ -1,26 +1,26 @@
 type Album {
-  images: [Cover]
-  name: String
-  uri: String
+  images: [Cover!]!
+  name: String!
+  uri: String!
 }
 
 type Artist {
-  name: String
-  uri: String
+  name: String!
+  uri: String!
 }
 
 type Cover {
-  height: Int
-  url: String
-  width: Int
+  height: Int!
+  url: String!
+  width: Int!
 }
 
 type Track {
-  album: Album
-  artists: [Artist]
-  duration: Float
-  name: String
-  spotifyUri: String
+  album: Album!
+  artists: [Artist!]!
+  duration: Float!
+  name: String!
+  spotifyUri: String!
   started: Float
   user: User
 }
@@ -28,14 +28,15 @@ type Track {
 type User {
   email: String!
   id: String!
-  lastPlay: Float
+  lastPlay: Float!
 }
 
 type Room {
   id: ID!
+  isPlaying: Boolean!
   name: String!
   currentTrack: Track
-  queue: [Track]!
+  queue: [Track!]!
   users: [User]!
 }
 
@@ -51,17 +52,17 @@ input JoinRoomInput {
 }
 
 type Query {
-  rooms: [Room]
-  room(name: String!): Room
+  rooms: [Room!]!
+  room(name: String!): Room!
 }
 
 type Mutation {
-  addRoom(roomName: String!): Room
-  joinRoom(input: JoinRoomInput!): Room
-  nextTrack(roomName: String!): Room
+  addRoom(roomName: String!): Room!
+  joinRoom(input: JoinRoomInput!): Room!
+  nextTrack(roomName: String!): Room!
   pause(roomName: String!): Boolean
   play(roomName: String!): Boolean
-  queueTrack(input: QueueInput!): Track
+  queueTrack(input: QueueInput!): Track!
   search(query: String!): [Track!]!
 }
 
