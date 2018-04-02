@@ -43,6 +43,7 @@ type Room {
 input QueueInput {
   roomName: String!
   spotifyId: String!
+  userEmail: String!
   userId: String!
 }
 
